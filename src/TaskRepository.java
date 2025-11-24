@@ -5,6 +5,7 @@ import java.util.List;
 public class TaskRepository {
 
     private List<Task> tasks = new ArrayList<>();
+//    יצירת קובץ גייסון
     private final String filePath = "tasks.json";
 
     // טוען את הקובץ פעם אחת כשנוצר repository
@@ -57,7 +58,7 @@ public class TaskRepository {
         return null;
     }
 
-//קבלת רשימת לכ המשימות
+//קבלת רשימת של המשימות
     public List<Task> listAll() {
         return new ArrayList<>(tasks);
     }
