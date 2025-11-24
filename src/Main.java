@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-//        בדיקה של הפונקציה
+//      עם המספרים  בדיקה של הפונקציה
 //        int[] arr = {1, 2, 3, 2, 4, 5, 1, 2};
 //        List<List<Integer>> increasingSubarrays = IncreasingSubarrays.findIncreasingSubarrays(arr);
 //
