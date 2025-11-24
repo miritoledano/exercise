@@ -4,6 +4,14 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+//        בדיקה של הפונקציה
+//        int[] arr = {1, 2, 3, 2, 4, 5, 1, 2};
+//        List<List<Integer>> increasingSubarrays = IncreasingSubarrays.findIncreasingSubarrays(arr);
+//
+//
+//        for(int i = 0; i < increasingSubarrays.size(); i++) {
+//            System.out.println(increasingSubarrays.get(i));
+//        }
         TaskRepository repository = new TaskRepository();
         TaskService service = new TaskService(repository);
         Scanner scanner = new Scanner(System.in);
@@ -45,4 +53,8 @@ public class Main {
             System.out.println(task);
         }
     }
+
+
+
+
 }

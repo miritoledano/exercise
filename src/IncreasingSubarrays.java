@@ -17,14 +17,14 @@ public class IncreasingSubarrays {
                 if (current.size() > 1) {
                     result.add(new ArrayList<>(current));
                 }
-//                לנקות את הרשימה
+//                ניקוי הרשימה
                 current.clear();
 //                עכשיו מתחילים מהאחרון שאני עומדת עליו
                 current.add(arr[i]);
             }
         }
 
-        // הוספת הרצף האחרון
+        // רצף אחרון
         if (current.size() > 1) {
             result.add(new ArrayList<>(current));
         }
