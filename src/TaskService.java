@@ -33,7 +33,7 @@ public void markTaskAsDone(int id) {
         }
         return result;
     }
-//    פונקציה שמחזירה רשימה ממוינת לפי הסטטוס וזה לפי הסדר שבו ה ENUM נמצא
+//    פונקציה שמחזירה רשימה ממוינת לפי הסטטוס וזה לפי הסדר שבו ה ENUM הוגדר מראש
     public List<Task> getTasksSortedByStatus() {
         List<Task> tasks = new ArrayList<>(repository.listAll());
         tasks.sort(Comparator.comparing(Task::getStatus));
