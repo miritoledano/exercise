@@ -29,32 +29,56 @@ public class DESIGN {
 
 
     public class BookDTO {
-        private String title;       // שם הספר (חובה)
+        private int idBo;    //        חובה
+        private String title;       //  חובה
         private String author;
-        private String serialNumber; // מספר סידורי ייחודי (חובה)
+        private String serialNumber; // חובה
         private int totalCopies;    //
         private boolean available = true;
 
-        // ניתן להוסיף בונים, גטרים וסטרים לפי הצורך
+
     }
 
     public class UserDTO {
+        private int idUs; //        חובה
         private String username;             // שם המשתמש (חובה)
         private String idNumber;             // מספר זהות (חובה)
         private String email;
         private List<BookDTO> borrowedBooks;
         private String subscriptionType;
         private double balance;
+    }
 
-        public class BorrowDTO {
-            private int userId;          // מזהה המשתמש(חובה)
-            private int bookId;          // מזהה הספר(חובה)
-            private LocalDate borrowDate;
-            private LocalDate dueDate;
-            private String status;
+    public class BorrowDTO {
+        private int idBr; //        חובה
+        private int userId;          // מזהה המשתמש חובה
+        private int bookId;          // מזהה הספר חובה
+        private LocalDate borrowDate;
+        private LocalDate dueDate;
+        private String status;
 
-        }
+    }
 //2
+public class User {
+    private int idUser;
+    private String fullName;
+    private String email;
+}
+    public class Order {
+        private int idOrder;
+        private int userId;
+        private LocalDate orderDate;
+        private double totalAmount;
+    }
+    public class Payment {
+        private int idPayment;
+        private int orderId;
+        private int userId;
+        private double amount;
+        private LocalDate paymentDate;
+    }
+
+
 //        מחלקת משתמש
 //אחראית לייצג את המשתמש שביצע הזמנות ותשלומים.
 //
@@ -66,9 +90,7 @@ public class DESIGN {
 //
 //איך מוודאים שהתשלום קשור להזמנה הנכונה:
 //
-//בכל תשלום יש שדה orderId שמציין עבור איזו הזמנה התשלום בוצע.
-//
-//יש לוודא ש-orderId של התשלום תואם ל-orderId של ההזמנה.
-//
-//בנוסף, ניתן לבדוק ש-userId של המשתמש שביצע את ההזמנה תואם ל-userId שביצע את התשלום.
-}}
+//orderId של התשלום == orderId של ההזמנה
+
+//userId של התשלום == userId של ההזמנה
+}
